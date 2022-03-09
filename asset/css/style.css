@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo{
+    height: 50px;
+}
+.bg_grey{
+    background-color: rgba(211, 211, 211, 0.596);
+}
