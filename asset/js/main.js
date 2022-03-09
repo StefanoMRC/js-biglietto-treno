@@ -9,10 +9,18 @@ document.getElementById("chilometri").innerHTML = kmDaPercorrere
 
 let eta=prompt("inserisci la tua eta")
 
+
+
+
 let prezzoBiglietto= kmDaPercorrere * 0.21;
-// document.getElementById("prezzo").innerHTML = prezzoBiglietto
 let scontoMinorenne= (prezzoBiglietto *20) / 100;
 let scontoAnziani= (prezzoBiglietto *40) / 100;
+let prezzoMinorenni= prezzoBiglietto-scontoMinorenne;
+let prezzoAnziani=prezzoBiglietto-scontoAnziani;
+
+
+
+
 if(eta >= 18 && eta <= 65) 
 {
    document.getElementById("prezzo").innerHTML = prezzoBiglietto 
@@ -20,11 +28,11 @@ if(eta >= 18 && eta <= 65)
 }
 else if(eta < 18)
 {
-    document.getElementById("prezzo").innerHTML = (prezzoBiglietto - scontoMinorenne) + " €";
+    document.getElementById("prezzo").innerHTML = (prezzoMinorenni.toFixed(2)) + " €";
     document.getElementById("sconto").innerHTML = "Ridotto Minorenne"
 }
 else if(eta > 65)
 {
-    document.getElementById("prezzo").innerHTML = (prezzoBiglietto - scontoAnziani) + " €";
+    document.getElementById("prezzo").innerHTML = (prezzoAnziani.toFixed(2)) + " €";
     document.getElementById("sconto").innerHTML = "Ridotto Over 65"
 }
