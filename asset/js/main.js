@@ -23,7 +23,7 @@ let prezzoAnziani=prezzoBiglietto-scontoAnziani;
 
 if(eta >= 18 && eta <= 65) 
 {
-   document.getElementById("prezzo").innerHTML = prezzoBiglietto 
+   document.getElementById("prezzo").innerHTML = prezzoBiglietto.toFixed(2)
    document.getElementById("sconto").innerHTML = "Intero"
 }
 else if(eta < 18)
