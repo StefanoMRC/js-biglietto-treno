@@ -23,16 +23,16 @@ let prezzoAnziani=prezzoBiglietto-scontoAnziani;
 
 if(eta >= 18 && eta <= 65) 
 {
-   document.getElementById("prezzo").innerHTML = prezzoBiglietto.toFixed(2)
-   document.getElementById("sconto").innerHTML = "Intero"
+   document.getElementById("prezzo").innerHTML = (prezzoBiglietto.toFixed(2)) + " €";
+   document.getElementById("sconto").innerHTML = "Intero";
 }
 else if(eta < 18)
 {
     document.getElementById("prezzo").innerHTML = (prezzoMinorenni.toFixed(2)) + " €";
-    document.getElementById("sconto").innerHTML = "Ridotto Minorenne"
+    document.getElementById("sconto").innerHTML = "Ridotto Minorenne";
 }
 else if(eta > 65)
 {
     document.getElementById("prezzo").innerHTML = (prezzoAnziani.toFixed(2)) + " €";
-    document.getElementById("sconto").innerHTML = "Ridotto Over 65"
+    document.getElementById("sconto").innerHTML = "Ridotto Over 65";
 }
